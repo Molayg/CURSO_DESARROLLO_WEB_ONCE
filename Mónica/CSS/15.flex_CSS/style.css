@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+}
+
+/* Contenedor- elemento hijo , maquetado sin display flex*/
+.hijo{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    color: whitesmoke;
+    margin: 10px;
+    }
+/*propiedad display:flex- Establece cuál es el eje principal y cuál es el secundario*/
+/* además establece la dirección del eje principal */
+
+.container {
+    display: flex;
+  }
+   
+    /* los valores disponibles son:
+    row - que establece el eje principal en horizontal.
+    row-reverse -  que establece el eje principal en horizontal INVERTIDO que
+    colocará los items contenedores en el orden inverso.
+    column-  que establece el eje principal en vertical.
+    column-reverse-  que hace del eje principal el vertical INVERTIDO, */
+    /*es decir colocará los items contenedores en el orden inverso.*/
+
+    .container {
+        display: flex;
+      }
+      
+      .hijo {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        color: whitesmoke;
+        margin: 10px;
+      }
+/*propiedad flex-direction disponible pero... ¿cómo funciona? esta
+propiedad establecerá la dirección del eje principal, y sus valores disponibles son:
+row, que establece el eje principal en horizontal.
+
+󾓫 Display: Flex CSS
+
+🎨 4
+
+row-reverse, que establece el eje principal en horizontal INVERTIDO, es decir,
+colocará los items contenedores en el orden inverso.
+column, que establece el eje principal en vertical.
+column-reverse, que hace del eje principal el vertical INVERTIDO, es decir,
+colocará los items contenedores en el orden inverso.
+
+    }
+/* propiedad flex-flow*/
+
+    .container{
+        flex-flow: column nowrap;
+        }
+        
+        
+        .container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        }
+
+        /*propiedad row/column-gap*/
+        /*row-gap: establece espacio entre filas, y solo funcionará
+          si tenemos flex-direction en column.
+          column-gap: espacio entre columnas, y solo funcionará con el 
+          flex-direction en row.*/
+          .container {
+            gap: 4px 8px;
+            /* Equivalente a */
+            row-gap: 4px;
+            column-gap: 8px;
+            }
+            
+            .container{
+            gap: 4px;
+            /* Equivalente a */
+            row-gap: 4px;
+            column-gap: 4px;
+            }

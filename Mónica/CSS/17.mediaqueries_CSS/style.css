@@ -1,0 +1,22 @@
+/* Azul para resoluciones menores a 640 píxeles de ancho (móviles).*/
+
+@media screen and (max-width: 640px) {
+    body {
+    background-color: blue;
+    }
+}
+    /*Rojo para resoluciones entre 640 píxeles y 1280 píxeles de ancho (tablets).*/
+    
+    @media screen and (min-width: 640px) and (max-width: 1280px) {
+    body {
+    background-color: red;
+    }
+}
+    
+    /*Verde para resoluciones mayores a 1280 píxeles (desktop).*/
+
+    @media screen and (min-width: 1280px) {
+    body {
+    background-color: green;
+    }
+}
