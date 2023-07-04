@@ -1,0 +1,49 @@
+/* SELECTORES */
+
+/* Selector de tipo o etiqueta */
+body {
+  background-color:rgb(236, 244, 244);
+  color: crimson;
+  }
+  p {
+    
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 800;
+    color: royalblue;
+  }
+
+  
+  /* Selector por clase */
+
+  .highlight {
+    font-style: italic;
+    color: crimson;
+  }
+  /* Selector por id */
+  
+  #best {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: crimson;
+  }
+
+  /* Selector universal */
+  
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Selector por atributo */
+
+  a[href="www.google.com"] {
+    color: blue;
+    }
+    a[href="www.twitter.com"] {
+    color: aqua;
+    }
+    a[href="www.github.com"] {
+    color: purple;
+    }
+  

@@ -1,0 +1,133 @@
+<h1>ETIQUETAS DE SCRIPTING HTML</h1>
+
+<p>
+  A medida que aprendemos HTML vemos que se trata de un lenguaje de marcas
+  estupendo y muy potente, pero también nos vamos dando cuenta que ciertos
+  detalles no se pueden cubrir sólo con HTML y CSS. Para ello tenemos que hacer
+  uso de un lenguaje de programación llamado Javascript.
+</p>
+
+<h2>Etiquetas interactivas: Qué se va a aprender</h2>
+<ol>
+  <li>Qué son y para qué se usan las etiquetas interactivas.</li>
+  <li>Cuáles existen y qué atributos las acompañan.</li>
+  <li>Ejemplo práctico de crear modales, algo que os será muy útil.</li>
+</ol>
+<p>
+  En HTML5 se añadieron etiquetas que posibilitan la interacción del usuario con
+  la página. Por esta razón, el usuario es parte fundamental de este proceso.
+</p>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Estas etiquetas pueden ser :</p>
+
+    <p>
+      <em>details</em> Crea un elemento desplegable, que contendrá todo el
+      contenido. Actúa como un div, pero inicialmente no aparecerá desplegado.
+      Lo que veremos será el título que le hayamos dado con el
+      <em>summary</em> junto a una flecha que indica que es un desplegable.
+    </p>
+
+    <details>
+      <summary>Más información</summary>
+      <h2>Nombre</h2>
+      <img
+        src="c:\Users\UsuarioM\Downloads\card-6.webp"
+        alt="Chica descansando"
+      />
+    </details>
+
+    <p>
+      <em>summary</em> Título del elemento que se verá estando o no desplegado.
+    </p>
+
+    <p>
+      <em>dialog</em> Ventana de diálogo que puede contener y mostrar
+      información. Se utiliza sobre todo para enviar alertas al usuario a través
+      de la pantalla. Es la mejor opción para sustituir al alert de javascript.
+    </p>
+
+    <dialog id="alert">
+      <p>¡Hola!</p>
+      <button id="close" onclick="document.getElementById('alert').close()">
+        Ok!
+      </button>
+    </dialog>
+    <button id="show" onclick="document.getElementById('alert').show()">
+      Mostrar
+    </button>
+
+    <p>
+      <em>onclick</em> será un evento de javascript de tipo clic, que indicará
+      una acción que debe ocurrir cuando se produzca ese clic. Otra opción muy
+      buena es la de crear modales desde HTML. Los modales son ventanas que
+      aparecen en pantalla y que no se quitan hasta que el usuario realiza la
+      acción que se le pide desde el modal. Por ejemplo, muchos avisos de
+      cookies que salen en algunas webs o cuando tienes un bloqueador de
+      anuncios y te salta un modal que, hasta que no desactivas el bloqueador no
+      te deja navegar. Para crear este modal podemos usar la función showModal()
+      como en el ejemplo:
+    </p>
+
+    <dialog id="gandalfModal">
+      <img src="gandalf.jpg" alt="Gandalf" />
+      <p>¡NO.. PUEDES... PASAR!</p>
+      <button
+        id="close"
+        onclick="document.getElementById('gandalfModal').close()"
+      >
+        Ok!
+      </button>
+    </dialog>
+    <button
+      id="show"
+      onclick="document.getElementById('gandalfModal').showModal()"
+    >
+      Mostrar
+    </button>
+
+    <p>
+      Si queremos darle al usuario la posibilidad de modificar un elemento,
+      existe el atributo contentEditable
+    </p>
+
+    <h3 contenteditable>Título</h3>
+    <div contenteditable>
+      <p>Este es un párrafo modificable de ejemplo</p>
+    </div>
+    <p>
+      Pero esto no persistirá, es decir, si modificamos el contenido y
+      recargamos la página no veremos reflejados los cambios. Esto quiere decir
+      que el atributo funciona como si cambiásemos el contenido del html a
+      través del inspector de elementos del navegador. Para hacer que los
+      cambios persistan deberíamos guardar el contenido editado mediante
+      javascript.
+    </p>
+
+    <h2>Etiquetas script</h2>
+
+    <p>
+      Si bien HTML y CSS son capaces de realizar muchas de las necesidades que
+      tendremos cuando queramos hacer una web, tienen sus limitaciones. Ahí es
+      donde entrará javascript, que se enlazarán al HTML con la etiqueta
+      <em>script</em>
+    </p>
+
+    <p>
+      Esta etiqueta sirve para cargar contenido Javascript en nuestro documento
+      HTML y podrá recibir los siguientes atributos: Atributo Valor Descripción
+      src URL Dirección URL del script externo a cargar. type tipo Tipo de
+      script a cargar. Si se omite, se asume text/javascript como valor.
+      nomodule boolean Si se define este atributo, el script no se carga en
+      navegadores modernos. async boolean Ejecuta el script cuando se haya
+      descargado, sin bloquear el navegador.
+    </p>
+  </body>
+</html>

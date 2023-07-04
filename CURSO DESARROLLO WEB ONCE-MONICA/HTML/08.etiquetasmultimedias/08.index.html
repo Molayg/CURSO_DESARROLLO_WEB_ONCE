@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=img, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ETIQUETAS MULTIMEDIA</h1>
+    <h2>Qué vamos a aprender </h2>
+<ol> 
+    <li>Las etiquetas que existen para mostrar imágenes.</li>
+    <li>Los atributos que acompañan a las etiquetas más comunes.></li>
+    <li>Los diferentes formatos de imágenes.</li>
+    <li>Cómo insertar imágenes de mapas en nuestra web.</li>
+</ol> 
+
+<h2>Etiquetas img</h2>
+
+<p>Cuando queremos incluir una imagen usaremos la etiqueta img , es una etiqueta que dispone de 
+varios atributos que nos permite modificarla aunque los obligatorios son src y alt.
+El primero hace referencia a la ruta donde se encuentra la imagen, ya sea una url o una ruta de 
+nuestro equipo, y la segunda hace referencia al texto alternativo que aparecerá en caso de que la 
+imagen no funcione o para personas con capacidades especiales.
+
+<img src="ruta" alt="texto alternativo"/>
+<img src="https://www.istockphoto.com/resources/images/HomePage/Tiles/SEB/Lifestyle-1129449588.jpg"
+    alt="Mujer y perro haciendo ejercicio"/>
+
+<p>Otros que no son obligatorios son el width y el height determina el tamaño de la imagen. 
+    Lo correcto es indicar estos valores mediante CSS.</p>
+
+Los formatos en los que se puede presentar una imagen son los siguientes:</p>
+<p>Formato                              Descripción                       Se recomienda</p>
+
+   PNG                                  Soporta transparencia.  
+                                        Compresión sin pérdidas.             Sí
+                                        Imágenes «lisas».
+
+   JPG                                  Compresión con pérdidas. 
+                                        Ideal para imágenes con texturas.    Sí
+   JPEG-XL                              Alternativa competidora a AV         poco soporte</p>
+
+<h2>Etiqueta picture</h2>
+
+<p>Cuando tenemos un conjunto de imágenes con diferentes resoluciones lo correcto es usar la 
+etiqueta <em>picture</em> que nos permite indicar el uso de una imagen u otra en base al tamaño 
+de la pantalla en la que se muestra nuestro contenido.
+El elemento <em>picture</em> contiene dos etiquetas: una o más etiquetas <em>source</em> y una etiqueta <em></em>y una etiqueta
+<em>img</em>. 
+
+<em>source</em>indicará la imagen que se tiene que mostrar en función del tamaño de nuestra pantalla.
+Por último, se indica una etiqueta <em>img</em> como alternativa por si no coincidiese el tamaño de 
+nuestra pantalla con ninguna de las opciones del <em>source</em>
+
+Ejemplo de código en el que se muestra lo que acabamos de definir y además os dejamos los tamaños 
+de pantalla que se utilizan como norma general a la hora de realizar media queries (en css), que 
+serán estas medidas estándar que se usan en base al tamaño de la pantalla del que os hablábamos 
+hace un momento:</p>
+
+<picture>
+<source media="(min-width: 600px)"
+srcset="-xl.png" />
+<source media="(min-width: 300px) and (max-width: 600px)"
+srcset="large.png" />
+<source media="(max-width: 50px)"
+srcset="small.png" />
+<img src="medium.png" alt="HTML5 medium" />
+</picture>
+
+<p>Además, tenemos el atributo srcset que nos servirá para mostrar una imagen u otra dependiendo 
+de la densidad de píxeles de nuestra pantalla.
+Así pues, esta etiqueta brinda a los desarrolladores web más flexibilidad para especificar recursos
+de imágenes.
+
+<p>Etiquetas img: Etiqueta Map</p>
+
+<p>Como extra os dejamos la etiqueta <map> que se utiliza para insertar un mapa de imagen en nuestra
+página web. Un mapa de imagen es una imagen con áreas en las que se puede hacer clic.
+El atributo obligatorio para esta etiqueta será el atributo name, que estará asociado con el 
+atributo usemap de la etiqueta <img> y eso hará que se conecten ambos elementos.
+El elemento <map> tendrá una serie de elementos <area> , que definirán las áreas en las que se 
+podremos hacer clic en nuestro mapa.
+La etiqueta <area> define un área dentro de un mapa de imagen. Estos elementos podrán estar 
+agrupados dentro de un <map>
+
+Ejemplo de código como siempre para que lo probéis (necesitaréis una imagen dentro de la carpeta 
+assets paraque funcione):</p>
+
+<map name="infographic">
+<area shape="poly" coords="130,147,200,107,254,219,130,228" href="https://developer.mozilla.org/docs/Web/HTML"
+target="_blank" alt="HTML"/>
+</map>
+<img usemap="#infographic" src="./assets/mapa.png" alt="MDN infographic" />
+
+
+Etiquetas de contenido externo
+
+Seguramente en algún momento nos hayamos planteado la posibilidad de insertar contenido en formato vídeo o audio de servicios
+como Youtube o Vimeo, pero no sabemos cómo podemos hacer para que el dichoso vídeo se vea en nuestra aplicación... pues
+bien, para eso tenemos este tipo de etiquetas, que posibilitarán este tipo de inserciones!
+Etiquetas de contenido externo: Etiqueta iframe
+En el caso que queramos embeber una aplicación dentro de nuestra web podemos usar la etiqueta <iframe> es muy habitual
+usarse cuando queremos incrustar Youtube o Spotify pero sirve para cualquier tipo de aplicaciones que lo contemplen.
+Os dejamos un paso a paso de cómo insertar mediante un iframe un vídeo de youtube:
+1) Nos iremos a youtube y seleccionaremos el vídeo que queramos añadir a nuestra web, en este caso elegiremos el canal de
+youtube de ThePowerMBA:
+2) Le daremos al botón de compartir que aparece en la esquina inferior derecha de la anterior imagen y nos saldrá el siguiente
+modal y le damos click a insertar y nos aparecerá una miniatura del vídeo con el iframe que tenemos que insertar a la derecha
+3) Le damos click a insertar y nos aparecerá una miniatura del vídeo con el iframe que tenemos que insertar a la derecha:
+
+<iframe width="560" height="315" src="https://youtu.be/us56bkaUOT4" title="YouTube video player" frameborder="0" allow="accelerometer; auto
+
+Como podemos comprobar, se nos han incrustado un montón de atributos y contenido adicional y podremos ir jugando con estos
+valores hasta llegar al resultado esperado.
+Etiquetas de contenido externo: Etiquetas embed y object
+Antiguamente se usaba la etiqueta <embed> para incrustar contenido flash en las webs. Actualmente esa etiqueta se ha sustituido
+por <object>, que incluye parámetros en su interior. Vamos a ver un ejemplo:
+    <object data="catgame.swf">
+        <param name="quality" value="high" />
+        </object>
+        
+        El atributo data dentro del <object> será el archivo que debemos cargar, y la etiqueta <param> contendrá los demás parámetros.
+        También podremos especificar el formato del que se trata, etc.
+        Etiquetas de contenido externo: Qué hemos aprendido
+        1. Las etiquetas de contenido multimedia incrustado que existen y cómo usarlas.
+        2. Ejemplo práctico de cómo usar un iframe en nuestra app.
+        3. Insertar contenido flash en nuestra web.
+        vídeo
+        Con HTML5 se introdujo la posibilidad de mostrar vídeos directamente en nuestra web. Para ello tendremos que usar en nuestro
+        código HTML la etiqueta <video>.
+        Os recordamos que en esta sección nos referiremos siempre a insertar vídeos que tenemos almacenados en nuestra base de
+        datos o archivo local, no será posible insertar vídeos de clientes externos con esta etiqueta <video>
+        Vídeo: Etiqueta vídeo
+        Para insertar vídeos en HTML tenemos una etiqueta concreta, que es la etiqueta <video>.
+        <video> contiene una o más <source> etiquetas con diferentes fuentes de video. El navegador elegirá la primera fuente que admita.
+        El texto entre las etiquetas <video> y </video> solo se mostrará en navegadores que no admitan el elemento <video>.
+        Vamos a ver algunos de los atributos de la etiqueta que nos permite configurar nuestro vídeo como autoplay (se reproducirá el
+        vídeo en cuanto cargue, es decir, automáticamente), controls (los controles de vídeo como pause, play, stop... se mostrarán en
+        pantalla) o el width que será el ancho que ocupará el cuadro de vídeo en nuestra pantalla.
+        Os dejamos un vídeo que podéis descargar para hacer la prueba!
+        <video src="./assets/thepower.mp4" autoplay controls width="600">
+        Tu navegador no admite el elemento <code>video</code>.
+        </video>
+        
+        Si tenéis curiosidad por saber todos estos elementos os dejamos un enlace a la documentación oficial de MDN. Os dejamos
+        además una tabla con los principales formatos de vídeo:
+        FORMATO CODEC DESCRIPCIÓN ¿RECOMENDADO?
+MP4 x264, DivX H264 Alta calidad. Codec x264 libre. Sí, buen soporte
+WebM VP8, VP9 Alternativa libre a MP4 de Google. Sí, soporte medio
+AVI XviD, DivX 3/5 Menor compresión que MP4. No, anticuado
+Vídeo: Qué hemos aprendido
+1. Cómo insertar vídeos que tengamos en base de datos o en nuestro local.
+2. Los diferentes formatos de vídeo que admite la mayoría de navegadores.
+Audio
+Antiguamente se usaba la etiqueta <bgsound>, pero con la llegada de HTML5 ésta se considera deprecated y lo correcto será usar
+la etiqueta <audio> cuando queramos insertar archivos de audio en nuestras webs.
+Audio: Etiqueta
+Al igual que hemos visto el uso de vídeo podemos usar también un reproductor de mp3 para gestionar nuestros audios.
+<audio src="audio.mp3" preload="none" controls></audio>
+
+La etiqueta <audio> se utiliza para incrustar contenido de sonido en un documento. Además, contiene una o más <source> etiquetas
+con diferentes fuentes de audio. El navegador elegirá la primera fuente que admita.
+El texto entre las etiquetas <audio> y </audio> solo se mostrará en navegadores que no admitan el <audio> elemento.
+Los atributos más usados junto a esta etiqueta son autoplay, loop, muted y controls, todos del tipo boolean y que ofrecen
+posibilidades como que se reproduzca automáticamente, que se reproduzca el contenido en bucle, que se silencie el audio o que
+se muestren los controles de reproducción del navegador.
+Os dejamos como siempre un ejemplo de código para que veáis los usos que acabamos de explicar:
+https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea5f430e-935f-4a8b-a2dd-140027a1362f/ladrido.mp3
+
+Os dejamos además una tabla con los principales formatos admitidos por los navegadores:
+FORMATO CODEC DESCRIPCIÓN ¿RECOMENDADO?
+MP3 MPEG Layer-3 Buena calidad. Sí, buen soporte
+AAC Advanced Audio Coding Mejora el MP3. Usado como audio en MP4. Sí, buen soporte
+OGG Ogg Vorbis Buena calidad. Alternativa libre a MP3. Sí, soporte medio
+Opus Opus Buena calidad. Alternativa libre a MP3. Sí, soporte medio
+FLAC FLAC Audio Lossless Compresión sin pérdidas. Alto tamaño. Sí, buen soporte.
+WAV Wave sound Formato de Microsoft. Está soportado. No, muy pesado
+Audio: Qué hemos aprendido
+1. Cómo insertar audio en nuestras webs.
+2. Los atributos que acompañan a la etiqueta <audio>
+    3. Los principales formatos de audio que soportan los navegadores.
+    Subtitle
+    A continuación os vamos a enseñar cómo podemos dotar a nuestras páginas web de subtítulos, algo que seguramente en algún
+    momento os será de gran utilidad!
+    Subtitle: Etiqueta track
+    La etiqueta <track> inserta pistas de texto para elementos <audio> o <video> y se usará para añadir subtítulos, archivos de
+    subtítulos u otros contenidos de texto que queremos que se visualicen cuando el contenido sea reproducido.
+    El formato de estos archivos de texto deberá ser WebVTT (es decir, tendrán la extensión .vtt al final del archivo). Este formato se
+    introduce con HTML5. Su sintaxis es algo así:
+    WEBVTT
+    00:03.000 --> 00:05.000
+    <v Alberto>
+    El fullstack development o desarrollo
+    web es el arte de construir aplicaciones
+    
+    La línea numérica indica el inicio y final de la aparición de la barra de subtítulos. Con la etiqueta <v> indicamos el personaje que
+    habla.
+    <video controls src="thepower.mp4" autoplay controls width="600">
+    <track default kind="captions" srclang="es" src="subtitulos.vtt.txt" />
+    Sorry, your browser doesn't support embedded videos.
+    </video>
+    
+    
+</body>
+</html>
+
+
