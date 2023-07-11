@@ -1,22 +1,57 @@
-/* Azul para resoluciones menores a 640 píxeles de ancho (móviles).*/
-
-@media screen and (max-width: 640px) {
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: coral;
+  }
+  
+  h1::after {
+    content: "Movil";
+  }
+  
+  /*SI MAQUETAMOS EN MOVIL ESTA PRIMERA NOS LA PODEMOS AHORRAR*/
+  /* Small devices such as large phones (640px and up) */
+  @media only screen and (min-width: 40em) {
     body {
-    background-color: blue;
+      background-color: coral;
     }
-}
-    /*Rojo para resoluciones entre 640 píxeles y 1280 píxeles de ancho (tablets).*/
-    
-    @media screen and (min-width: 640px) and (max-width: 1280px) {
+  
+    h1::after {
+      content: "Movil";
+    }
+  }
+  
+  /* Medium devices such as tablets (768px and up) */
+  @media only screen and (min-width: 48em) {
     body {
-    background-color: red;
+      background-color: darkslategray;
     }
-}
-    
-    /*Verde para resoluciones mayores a 1280 píxeles (desktop).*/
-
-    @media screen and (min-width: 1280px) {
+  
+    h1::after {
+      content: "Tablet";
+    }
+  }
+  
+  /* Large devices such as laptops (1024px and up) */
+  @media only screen and (min-width: 64em) {
     body {
-    background-color: green;
+      background-color: palevioletred;
     }
-}
+  
+    h1::after {
+      content: "Portatil";
+    }
+  }
+  
+  /* Largest devices such as desktops (1280px and up) */
+  @media only screen and (min-width: 80em) {
+    body {
+      background-color: darkgoldenrod;
+    }
+  
+    h1::after {
+      content: "Desktop";
+    }
+  }
+  
