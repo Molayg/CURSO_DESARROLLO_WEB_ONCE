@@ -18,3 +18,5 @@ console.log(myP);
 //Varios elementos
 const myLis = document.querySelectorAll(".list-item");
 console.log(myLis);
+
+
