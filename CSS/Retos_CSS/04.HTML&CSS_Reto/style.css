@@ -1,11 +1,19 @@
+/* Para practicar estos pequeños conceptos vamos a probar a generar un documento
+HTML con el siguiente contenido:*/
+/* Tendremos que utilizar correctamente la etiqueta link para enlazar el fichero css
+correspondiente, en nuestro caso, un fichero llamado style.css con el siguiente
+contenido:*/
+/* Os animamos a que probéis a modificar los valores de las diferentes reglas ya dadas
+para ver los efectos reflejados en el navegador.*/
+
 body {
-    background-color: rgb(43, 43, 43);
-    color: whitesmoke;
+    background-color: cadetblue;
+    color: black;
     }
-    h1 {
+    h2 {
     text-transform: uppercase;
     }
     li {
-    color: crimson;
+    color: orange;
     font-style: italic;
     }
