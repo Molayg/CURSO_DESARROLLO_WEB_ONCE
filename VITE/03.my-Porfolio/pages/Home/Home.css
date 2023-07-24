@@ -1,0 +1,35 @@
+.home {
+    padding: 0 8rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: flex-end;
+    gap: 3rem;
+    justify-content: flex-end;
+    }
+    @media (max-width: 700px) {
+    .home {
+    padding: 0 2rem;
+    }
+    }
+    .home > h2 {
+    font-size: 40px;
+    background: linear-gradient(to right, #9845e8 0%, #33d2ff 50%, #dd5789 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .home > a {
+    font-size: 1.5rem;
+
+    }
+
+    .home > p {
+
+     display: flex;
+     justify-content: center;
+    
+    }
+
+   
