@@ -309,7 +309,11 @@
   
 .container-sales-area{
  
+<<<<<<< HEAD
     height: auto;
+=======
+    height: 2000px;
+>>>>>>> e912bde741248ddf046c18e5f5da3dc5f740e08f
     color: white;
     margin-top: 50px;
     padding: 20px;
@@ -317,7 +321,11 @@
     
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     background-color: #131313;
+=======
+    background-color: red;
+>>>>>>> e912bde741248ddf046c18e5f5da3dc5f740e08f
     justify-content: center;
     }
     
@@ -404,7 +412,11 @@
     transform: scale(1.1);
     cursor: pointer;
     text-decoration: underline;
+<<<<<<< HEAD
     color: white;
+=======
+    color: red;
+>>>>>>> e912bde741248ddf046c18e5f5da3dc5f740e08f
   }
   
 
@@ -427,6 +439,7 @@
       height: 100%;
     }
   }
+<<<<<<< HEAD
 
   
   
@@ -440,6 +453,31 @@
     }
     
     .video h4 {
+=======
+.container-video > iframe{
+  width:500px;
+  height:500px;
+}
+  
+  .container-video {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    }
+    
+    /* Estilo para el video dentro del contenedor */
+    .container-video iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    
+    .container-video h4 {
+>>>>>>> e912bde741248ddf046c18e5f5da3dc5f740e08f
       width: 893.29px;
       height: 177.60px;
       display: flex;
