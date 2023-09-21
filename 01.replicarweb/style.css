@@ -1,0 +1,465 @@
+
+  
+
+
+ 
+body{
+  margin:0;
+  padding:0;
+
+}
+ 
+.header-container {
+  background-color:rgb(243, 116, 116);
+  width: 100%;
+  height: 252,88px;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  display:flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  position:fixed;
+ }
+
+ .container-logos {
+  display: flex;
+  flex-direction:row ;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.container-logos ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-logos li {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio entre los logos */
+}
+
+.container-logos img {
+  width: 215px;
+  height: 126px;
+  object-fit: contain; /* Mantiene la relación de aspecto del logo */
+}
+
+.container-logos li:first-child {
+  margin-left: 150px; /* Margen izquierdo para el primer logo */
+}
+
+.container-logos li:last-child {
+  margin-right: 150px; /* Margen derecho para el último logo */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .container-logos li:first-child,
+  .container-logos li:last-child {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+.container-social-icons {
+  height: 31.75px;
+  background-color:white;
+  color: white; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2px;
+  list-style: none;
+}
+
+.social-icons {
+  margin-right: 20px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0px;
+  
+}
+.social-icons:hover {
+  color: white;
+} 
+
+@media (max-width: 767px) {
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.social-icons {
+    margin-bottom: 10px;
+  }
+}
+  
+.navbar {
+  background-color: #333; /* Cambia el color de fondo del menú según tus preferencias */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff; /* Color de texto por defecto para los enlaces */
+  transition: color 0.3s ease; /* Transición para el cambio de color */
+}
+
+.menu a:hover {
+  color: #007bff; /* Cambio de color al pasar el cursor (azul) */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu li {
+      padding: 10px 0;
+  }
+}
+
+  
+.body-container {
+  width: 200px;
+  height: 55,64px;
+  background-color:blue;
+  color: #cd1401; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px 15px;
+  list-style: none;
+ 
+}
+.carrousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    animation: slide 5s infinite;
+}
+
+.carrusel-item {
+    flex: 1;
+    text-align: center;
+}
+
+.carrusel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+  
+.container-Por talento digital-area {
+h2
+p {text-align: left;
+}
+  
+.Por talento digital {
+
+}
+
+
+image-caption {
+
+}
+  
+
+  
+
+
+
+
+    .grid {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-gap: 10px;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 15px;
+      
+   }
+
+   .image-caption{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 10px 10px;
+   }
+      
+   .grid img {
+    width: 250px;
+    height: 250px;
+    
+   
+
+    }
+    
+    
+    .grid h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    flex-wrap:wrap;
+    width: 250px;
+   
+    
+
+    }
+    
+  .grid p {
+    font-size: 14px;
+    color: white;
+    width: 250px;
+  
+    
+  }
+  .grid img  {
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .grid img :hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+  }
+  
+
+  button:active {
+    background-color: #c4c4c4;
+    display: flex;
+    justify-self: center;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .grid img  {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  
+  
+    
+    
+    
+    .video{
+      width: 100%;
+   
+
+    }
+    
+    .video h4 {
+      width: 893.29px;
+      height: 177.60px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin-top: 10px;
+      font-size: 80px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    
+    .horizontal-line {
+      width:auto;
+     height: 2px; 
+     background-color: #131313;
+     display: flex; 
+     justify-content: center;
+
+    }
+    .container-footer {
+      width: 100vw;
+      height: 386.8px;
+      background-color: RED;
+      color:white;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 16px;
+      padding: 60px 0px 0px;
+      display: flex;
+      justify-content: flex-end;
+     
+     }
+
+    .container-contactos-formularios {
+      width: 1058.80px;
+      height: 231.80px;
+      background-color: blue;
+      color:white;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 16px;
+      margin: 0px 0px 0px -22px;
+      
+      
+      
+
+    }
+    .container-formularios {
+      width: 327.40px;
+      height: 231.80px;
+      background-color: white;
+      color:white;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 16px;
+      padding: 0px 60px 0px 0px;
+      display: flex;
+      
+
+     
+    }
+   
+    .formulario-registro{
+      width: 267.40px;
+      height: 19.20px;
+      background-color: green;
+      color:white;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 12px;
+      margin: 0px 0px 0px 20px;
+      
+      
+    }
+    
+    .formulario-suscripcion {
+      width: 262.08px;
+      height: 59.50px;
+      background-color: orange;
+      color:white;
+      font-family: "Helvetica",Arial, sans-serif;
+      font-size: 13.60px;
+
+    }
+   
+   .formulario-contacto {
+    width: 267.40px;
+    height: 43.35px;
+    background-color: rosybrown;
+    color:white;
+    font-family: "Helvetica",Arial, sans-serif;
+    padding: 10px 45px 10px 0px;
+    
+  }
+
+  .container-button{
+    width: 242.70px;
+    height: 29.75px;
+    color:white;
+    font-family: "Helvetica",Arial, sans-serif;
+    font-size: 13.60px;
+    margin:  0px 0px 3.4px;
+    background-color: #c4c4c4;
+    display: block;
+    justify-content: center;
+
+ }
+   
+
+.button-buscar :active{
+  width: 44.73px;
+  height: 16px;
+  background-color: #131313;
+  color:white;
+  font-family: "Helvetica",Arial, sans-serif;
+  font-size: 13.60px;
+  
+}
+.button-buscar:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  text-decoration: underline;
+  
+
+  }
+ 
+  
+    
+   
+   .horizontal-line-2{
+    width:auto;
+    height: 2px; 
+    background-color: #131313;
+    display: flex; 
+    justify-content: center;
+
+   }  
+   .footer  {
+    width: 1036px;
+    height: 34.20px;
+    background-color: #131313;
+    color:white;
+    font-family: "Helvetica",Arial, sans-serif;
+    font-size: 12px;
+    padding: 7.5px 0px;
+
+   } 
+
+   .footer > item {
+    width: 225.91px;
+    height: 1.60px;
+    background-color: #131313;
+    color:white;
+    font-family: "Helvetica",Arial, sans-serif;
+    font-size: 12px;
+    
+
+
+   }
+   
+   
+
+
+  
+           
+
+
+
+ 
+
+
+

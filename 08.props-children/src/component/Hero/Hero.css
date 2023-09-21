@@ -1,0 +1,17 @@
+.hero{
+    height: 250px;
+    border: 2px solid red;
+}
+.hero > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    animation: zoomOut 1s;
+}
+
+@keyframes zoomOut {
+    from {
+        
+    }
+}

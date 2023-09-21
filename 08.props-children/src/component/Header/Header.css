@@ -1,0 +1,10 @@
+header{
+    height: 120px;
+    border:2cm 2px solid red;
+    display:flex;
+    align-items: center;
+    padding:20px;
+    gap:20px;
+
+}
+
